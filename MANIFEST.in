@@ -1,4 +1,0 @@
-include marketplace/schema.sql
-graft marketplace/static
-graft marketplace/templates
-global-exclude *.pyc
