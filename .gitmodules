@@ -1,0 +1,3 @@
+[submodule "spriggan-shared"]
+	path = spriggan-shared
+	url = https://github.com/Gaerax/spriggan-shared.git

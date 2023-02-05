@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { resetIndex, client } from './connection';
 
-import Game from '../types/Game'
+import Game from '../spriggan-shared/types/Game'
 
 const readAndInsertGames = async () => {
 	try {

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Game from '../types/Game'
+import Game from '../spriggan-shared/types/Game'
 
 const host = 'localhost'
 const datalayerPort = 8562

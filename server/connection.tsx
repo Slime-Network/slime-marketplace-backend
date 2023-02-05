@@ -64,4 +64,4 @@ const putGameMapping = async (i: string) => {
 	return client.indices.putMapping({ index, type, body: { properties: schema } })
 }
 
-export { client, checkConnection, resetIndex }
+export { client, checkConnection, resetIndex, index, type }
