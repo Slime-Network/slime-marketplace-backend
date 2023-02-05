@@ -5,12 +5,12 @@ services:
     container_name: marketplace-api
     build: .
     ports:
-      - "3000:3000" # Expose API port
+      - "5233:5233" # Expose API port
       - "9229:9229" # Expose Node process debug port (disable in production)
     environment: # Set ENV vars
      - NODE_ENV=local
      - ES_HOST=elasticsearch
-     - PORT=3000
+     - PORT=5233
     volumes: # Attach local game data directory
       - ./games:/usr/src/app/games
 

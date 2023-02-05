@@ -5,9 +5,9 @@ const esConnection = require('./connection');
 class Game {
 	constructor(
 			productid, datastoreid, title, publisher, capsuleimage,
-			developer, description, longdescription, website, twitter,
+			developer, shortdescription, description, longdescription, website, twitter,
 			discord, instagram, publisherdid, contentrating, icon,
-			tags, status, version, screenshots, paymentaddress, password, ispublic) {
+			tags, trailer, trailersource, status, version, screenshots, paymentaddress, password, ispublic) {
 
 		this.productid = productid;
 		this.datastoreid = datastoreid;
@@ -15,6 +15,7 @@ class Game {
 		this.publisher = publisher;
 		this.capsuleimage = capsuleimage;
 		this.developer = developer;
+		this.shortdescription = shortdescription;
 		this.description = description;
 		this.longdescription = longdescription;
 		this.website = website;
@@ -25,6 +26,8 @@ class Game {
 		this.contentrating = contentrating;
 		this.icon = icon;
 		this.tags = tags;
+		this.trailer = trailer;
+		this.trailersource = trailersource;
 		this.status = status;
 		this.version = version;
 		this.screenshots = screenshots;
@@ -64,6 +67,7 @@ function parseGameFile (filePath) {
 			game.publisher,
 			game.capsuleimage,
 			game.developer,
+			game.shortdescription,
 			game.description,
 			game.longdescription,
 			game.website,
@@ -74,6 +78,8 @@ function parseGameFile (filePath) {
 			game.contentrating,
 			game.icon,
 			game.tags,
+			game.trailer,
+			game.trailersource,
 			game.status,
 			game.version,
 			game.screenshots,
