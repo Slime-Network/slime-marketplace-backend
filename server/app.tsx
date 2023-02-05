@@ -1,9 +1,9 @@
-const Koa = require('koa')
-const Router = require('koa-router')
-const joi = require('joi')
-const validate = require('koa-joi-validate')
-const search = require('./search')
-const esConnection = require('./connection');
+import Koa from 'koa'
+import Router  from 'koa-router'
+import joi from 'joi'
+import validate from 'koa-joi-validate'
+import search from './search'
+import { client } from './connection'
 
 const app = new Koa()
 const router = new Router()
@@ -92,7 +92,7 @@ router.put('/requestlisting',
 		ctx.body = "Requested listing: " + game;
 		console.log("post parse", game);
 
-		await esConnection.client.index({
+		await client.index({
 			index: 'listings',
 			type: 'game',
 			id: game.productid + game.publisher,

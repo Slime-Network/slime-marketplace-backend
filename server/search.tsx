@@ -1,8 +1,7 @@
-const { client, index, listingindex, type } = require('./connection')
+import { client, index, type } from './connection'
 
-module.exports = {
-	/** Query ES index for the provided term */
-	queryTerm (term, offset = 0) {
+const search = {
+	queryTerm: (term: string, offset: number = 0) => {
 		const body = {
 			from: offset,
 			query: {
@@ -28,7 +27,7 @@ module.exports = {
 		return client.search({ index, type, body })
 	},
 
-	queryListingRequests (term, offset = 0) {
+	queryListingRequests: (term: string, offset: number = 0) => {
 		const body = {
 			from: offset,
 			query: {
@@ -54,3 +53,5 @@ module.exports = {
 		return client.search({ index, type, body })
 	}
 }
+
+export default search
