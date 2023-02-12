@@ -1,34 +1,38 @@
-import elasticsearch from 'elasticsearch'
+import { Client } from '@elastic/elasticsearch';
 
-const index = 'listings'
-const type = 'game'
-const port = 9200
-const host = process.env.ES_HOST || 'localhost'
-const client = new elasticsearch.Client({ host: { host, port } })
+const index = 'listings';
+const type = 'game';
+const port = 9200;
+const host = process.env.ES_HOST || 'localhost';
 
+console.log("Connected to Elasticsearch: " + "http://" + host + ':' + port)
+const client = new Client({
+	node: "http://" + host + ':' + port,
+
+});
 
 const checkConnection = async () => {
-	let isConnected = false
+	let isConnected = false;
 	while (!isConnected) {
-		console.log('Connecting to ES')
+		console.log('Connecting to ES');
 		try {
-			const health = await client.cluster.health({})
-			console.log(health)
-			isConnected = true
+			const health = await client.cluster.health({});
+			console.log(health);
+			isConnected = true;
 		} catch (err) {
-			console.log('Connection Failed, Retrying...', err)
+			console.log('Connection Failed, Retrying...', err);
 		}
 	}
-}
+};
 
 const resetIndex = async () => {
 	if (await client.indices.exists({ index })) {
-		await client.indices.delete({ index })
+		await client.indices.delete({ index });
 	}
 
-	await client.indices.create({ index })
-	await putGameMapping(index)
-}
+	await client.indices.create({ index });
+	await putGameMapping(index);
+};
 
 const putGameMapping = async (i: string) => {
 	const schema = {
@@ -43,7 +47,7 @@ const putGameMapping = async (i: string) => {
 		facebook: { type: 'keyword' },
 		icon: { type: 'text' },
 		instagram: { type: 'keyword' },
-		ispublic: { type: 'boolean'},
+		ispublic: { type: 'boolean' },
 		longdescription: { type: 'text' },
 		password: { type: 'text' },
 		paymentaddress: { type: 'keyword' },
@@ -59,9 +63,9 @@ const putGameMapping = async (i: string) => {
 		twitter: { type: 'keyword' },
 		website: { type: 'keyword' },
 		version: { type: 'text' },
-	}
+	};
 
-	return client.indices.putMapping({ index, type, body: { properties: schema } })
-}
+	return client.indices.putMapping({ index, dynamic:true});
+};
 
-export { client, checkConnection, resetIndex, index, type }
+export { client, checkConnection, resetIndex, index, type };
