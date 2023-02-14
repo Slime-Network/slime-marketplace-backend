@@ -17,6 +17,13 @@ router.get('/search', async (ctx: Koa.Context) => {
 	},
 );
 
+router.get('/mostRecent', async (ctx: Koa.Context) => {
+		const searchParams = ctx.request.query as unknown as SearchParams;
+		console.log('Search params: ', searchParams);
+		ctx.body = await search.mostRecent(searchParams);
+	},
+);
+
 const search = {
 	queryTerm: (params: SearchParams) => {
 		return client.search({
@@ -32,6 +39,30 @@ const search = {
 								fuzziness: 'auto',
 							},
 						}},
+						{match: {
+							ispublic: {
+								query: true
+							}
+						}}
+					],
+				},
+			},
+			highlight: { fields: { title: {} } },
+		});
+	},
+	mostRecent: (params: SearchParams) => {
+		return client.search({
+			from: params.offset,
+			index: index,
+			query: {
+				bool: {
+					must: [
+						{match_all: { } },
+						{match: {
+							ispublic: {
+								query: true
+							}
+						}}
 					],
 				},
 			},
@@ -39,5 +70,6 @@ const search = {
 		});
 	},
 };
+
 
 export { router };
