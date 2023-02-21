@@ -24,6 +24,13 @@ router.get('/mostRecent', async (ctx: Koa.Context) => {
 	},
 );
 
+router.get('/installData', async (ctx: Koa.Context) => {
+		const searchParams = ctx.request.query as unknown as SearchParams;
+		console.log('Search params: ', searchParams);
+		ctx.body = await search.mostRecent(searchParams);
+	},
+);
+
 const search = {
 	queryTerm: (params: SearchParams) => {
 		return client.search({
@@ -40,7 +47,7 @@ const search = {
 							},
 						}},
 						{match: {
-							ispublic: {
+							isPublic: {
 								query: true
 							}
 						}}
@@ -59,7 +66,7 @@ const search = {
 					must: [
 						{match_all: { } },
 						{match: {
-							ispublic: {
+							isPublic: {
 								query: true
 							}
 						}}

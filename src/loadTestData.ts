@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { resetIndex, client } from './app/data/connection';
 
-import Game from '../spriggan-shared/types/Game';
+import { Media } from '../spriggan-shared/types/Media';
 
 const readAndInsertGames = async () => {
 	try {
@@ -23,21 +23,21 @@ const readAndInsertGames = async () => {
 };
 
 function parseGameFile(filePath: string) {
-	const game = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-	console.log(game);
-	if (game.productid) {
-		return game as Game;
+	const media = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+	console.log(media);
+	if (media.productId) {
+		return media as Media;
 	}
-	return {} as Game;
+	return {} as Media;
 }
 
-const insertGameData = async (game: Game) => {
+const insertGameData = async (media: Media) => {
 	await client.index({
 		index: 'listings',
-		id: game.productid + game.publisher,
-		document: game,
+		id: media.productId + media.publisher,
+		document: media,
 	});
-	console.log(`Indexed Game - ${game.title} By ${game.publisher}`);
+	console.log(`Indexed Game - ${media.title} By ${media.publisher}`);
 };
 
 readAndInsertGames();
