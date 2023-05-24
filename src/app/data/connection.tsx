@@ -1,7 +1,7 @@
 import { Client } from '@elastic/elasticsearch';
 
 const index = 'listings';
-const type = 'game';
+const type = 'media';
 const port = 9200;
 const host = process.env.ES_HOST || 'localhost';
 
@@ -31,12 +31,13 @@ const resetIndex = async () => {
 	}
 
 	await client.indices.create({ index });
-	await putGameMapping(index);
+	await putMediaMapping(index);
 };
 
-const putGameMapping = async (i: string) => {
+const putMediaMapping = async (i: string) => {
 	const schema = {
 		banner: { type: 'text' },
+		businessEmail: { type: 'text' },
 		capsuleImage: { type: 'text' },
 		contentRating: { type: 'keyword' },
 		datastoreId: { type: 'keyword' },
@@ -48,6 +49,8 @@ const putGameMapping = async (i: string) => {
 		icon: { type: 'text' },
 		instagram: { type: 'keyword' },
 		isPublic: { type: 'boolean' },
+		lastUpdated: { type: 'number' },
+		lastUpdatedContent: { type: 'number' },
 		longDescription: { type: 'text' },
 		password: { type: 'text' },
 		paymentAddress: { type: 'keyword' },
@@ -56,6 +59,7 @@ const putGameMapping = async (i: string) => {
 		publisherDid: { type: 'keyword' },
 		screenshots: { type: 'keyword' },
 		status: { type: 'text' },
+		supportEmail: { type: 'text' },
 		tags: { type: 'text' },
 		title: { type: 'text' },
 		torrents: { type: 'text' },
@@ -65,7 +69,7 @@ const putGameMapping = async (i: string) => {
 		version: { type: 'text' },
 	};
 
-	return client.indices.putMapping({ index, dynamic:true});
+	return client.indices.putMapping({ index, dynamic: true });
 };
 
 export { client, checkConnection, resetIndex, index, type };

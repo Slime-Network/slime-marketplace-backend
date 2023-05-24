@@ -23,5 +23,9 @@
 	"screenshots": "https://cdn.akamai.steamstatic.com/steam/apps/238320/ss_de19e8b1f41d9594bf64d02424a0ec5046c733f5.1920x1080.jpg?t=1666817106, https://cdn.akamai.steamstatic.com/steam/apps/238320/ss_1b4cc24b78f404c69fa18d42e5d5b00873c8852f.1920x1080.jpg?t=1666817106, https://cdn.akamai.steamstatic.com/steam/apps/238320/ss_c629aed2b6d7751222acb9bef1022338f9bc6b03.1920x1080.jpg?t=1666817106",
 	"paymentAddress": "xch1w89m85c6kr7w4jtff5r53lfardjcawsnrdnxh5ke9aeqnaeddphqjez9jh",
 	"password": "password123",
-	"isPublic": true
+	"isPublic": true,
+	"supportEmail": "hello@example.com",
+	"businessEmail": "hello@example.com",
+	"lastUpdated": 12387,
+	"lastUpdatedContent": 123478
 }
