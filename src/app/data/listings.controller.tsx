@@ -1,13 +1,13 @@
-import { client, index, type } from './connection';
-import { SearchParams, InstallDataParams, RequestListingOrUpdateParams, SetMediaPublicParams } from '../../../spriggan-shared/types/SearchTypes';
+import { client, checkConnection, index } from './connection';
+import { SearchRequest, GetInstallDataRequest, RequestListingOrUpdateRequest, SetMediaPublicRequest, GetSignMessageRequest, SortOptions } from '../../../gosti-shared/types/gosti/MarketplaceApiTypes';
 
-import { RPCAgent } from "chia-agent";
-import { verify_signature } from "chia-agent/api/rpc/wallet";
-import { validationResults } from "koa-req-validation";
 import Koa from 'koa';
 import Router from 'koa-router';
-import { ParsedUrlQuery } from 'querystring';
-import { Media } from '../../../spriggan-shared/types/Media';
+import { RPCAgent, ErrorResponse } from 'chia-agent';
+import { get_recent_signage_point_or_eos, verify_signature, subscriptions } from 'chia-agent/api/rpc';
+import { Media } from '../../../gosti-shared/types/gosti/Media';
+import { QueryDslQueryContainer, Sort } from '@elastic/elasticsearch/lib/api/types';
+import { param } from 'koa-req-validation';
 
 const routerOpts: Router.IRouterOptions = {
 	prefix: '/listings',
@@ -16,67 +16,66 @@ const routerOpts: Router.IRouterOptions = {
 const router: Router = new Router(routerOpts);
 
 router.get('/search', async (ctx: Koa.Context) => {
-	const searchParams = ctx.request.query as unknown as SearchParams;
+	const searchParams = ctx.request.query as unknown as SearchRequest;
 	console.log('Search params: ', searchParams);
-	ctx.body = await search.queryTerm(searchParams);
-});
-
-router.get('/mostRecent', async (ctx: Koa.Context) => {
-	const searchParams = ctx.request.query as unknown as SearchParams;
-	console.log('Search params: ', searchParams);
-	const res = await search.mostRecent(searchParams);
-	console.log(res)
-	ctx.body = res;
+	ctx.body = await queryTerm(searchParams);
 });
 
 router.get('/getSignMessage', async (ctx: Koa.Context) => {
-	// const agent = new RPCAgent({ service: "full_node" });
-	// const signagePoint = await get_recent_signage_point_or_eos(agent);
-	const date = new Date();
-	const roundedDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), 0, 0, 0);
-	const message = "Spriggan signature at: " + roundedDate.toString();
-	console.log("message to sign", message)
-	ctx.body = message;
+	ctx.body = buildSignatureMessage((ctx.request.query as unknown as GetSignMessageRequest).media);
 });
 
-router.get('/getInstallData', async (ctx: Koa.Context) => {
-	const params = ctx.request.query as unknown as InstallDataParams;
-
-	// const walletAgent = new RPCAgent({ service: "wallet" });
-	// const signagePoint = await get_recent_signage_point_or_eos(fullNodeAgent);
-
-
+const buildSignatureMessage = (media: Media) => {
 	const date = new Date();
 	const roundedDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), 0, 0, 0);
 
-	console.log("roundedDate", roundedDate)
+	const message = "gosti signature at: " + roundedDate.toString() + " for media: " + media.productId;
+	console.log("message to sign", message)
+	return message;
+}
 
-	// const verification = await verify_signature(walletAgent, { message: roundedDate.toString(), pubkey: params.pubkey, signature: params.signature })
+router.get('/getInstallData', async (ctx: Koa.Context) => {
+	const params = ctx.request.query as unknown as GetInstallDataRequest;
 
-	// check offer in params to confirm ownership
+	try {
+		// const message = buildSignatureMessage(params.media);
+		// const walletAgent = new RPCAgent({ service: 'wallet' });
+		// const verification = await verify_signature(walletAgent, { message, pubkey: params.pubkey, signature: params.signature })
 
-	console.log('verification: ', params);
-	const res = await search.installData(params);
-	ctx.body = res;
+		// console.log('verification: ', verification);
+		const res = await getInstallData(params);
+		ctx.status = 200;
+		ctx.body = res;
+	} catch (e) {
+		console.log("error", e)
+		ctx.status = 500;
+		ctx.body = e;
+	}
 });
 
 
 router.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
 	let params = undefined
 	try {
-		params = (ctx.request.body as any).params as RequestListingOrUpdateParams
+		params = (ctx.request.body as any).params as RequestListingOrUpdateRequest
 		console.log("params", params)
 
 		const exists = await client.exists({ index: index, id: params.media.productId });
 
 		// check datalayer
 
+		// const datalayerAgent = new RPCAgent({ service: 'data_layer' });
+		// const stores = await subscriptions(datalayerAgent);
+
+		// console.log("stores", stores)
+
+
 		console.log("exists", exists)
 		if (exists) {
-			const res = await listing.update(params);
+			const res = await update(params);
 			ctx.body = res;
 		} else {
-			const res = await listing.requestListing(params);
+			const res = await requestListing(params);
 			ctx.body = res;
 		}
 	} catch (e) {
@@ -85,119 +84,163 @@ router.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
 });
 
 router.get('/setMediaPublic', async (ctx: Koa.Context) => {
-	const requestParams = ctx.request.query as unknown as SetMediaPublicParams;
+	const requestParams = ctx.request.query as unknown as SetMediaPublicRequest;
+	// need to make this permissioned
 	console.log("setMediaPublic", requestParams);
-	const res = await listing.setMediaPublic(requestParams);
+	const res = await setMediaPublic(requestParams);
 	ctx.body = res;
 });
 
-const search = {
-	queryTerm: (params: SearchParams) => {
-		return client.search({
-			from: params.offset,
-			index: index,
-			_source: {
-				"excludes": ["*.password", "*.torrents", "*.executables"]
-			},
-			query: {
-				bool: {
-					must: [
-						{
-							match: {
-								title: {
-									query: params.titleTerm,
-									operator: 'and',
-									fuzziness: 'auto',
-								},
-							}
+const queryTerm = (params: SearchRequest) => {
+	var sort: Sort = [
+		{
+			"lastUpdatedContent": {
+				"order": "desc"
+			}
+		},
+	]
+
+	switch (params.sort) {
+		case SortOptions.DateAsc:
+			sort = [
+				{
+					"lastUpdatedContent": {
+						"order": "asc"
+					}
+				},
+			]
+			break;
+		case SortOptions.DateDesc:
+			sort = [
+				{
+					"lastUpdatedContent": {
+						"order": "desc"
+					},
+				},
+			]
+			break;
+		case SortOptions.NameAsc:
+			sort = [
+				{
+					"title.keyword": {
+						"order": "asc"
+					}
+				},
+			]
+			break;
+		case SortOptions.NameDesc:
+			sort = [
+				{
+					"title.keyword": {
+						"order": "desc"
+					}
+				},
+			]
+			break;
+	}
+
+
+	var query: QueryDslQueryContainer = {
+		bool: {
+			must: [
+				{
+					match: {
+						title: {
+							query: params.titleTerm,
+							operator: 'and',
+							fuzziness: 'auto',
 						},
-						{
-							match: {
-								isPublic: {
-									query: true
-								}
+					}
+				},
+				{
+					match: {
+						isPublic: {
+							query: true
+						}
+					}
+				}
+			],
+		}
+	}
+
+	if (params.titleTerm == "" || params.titleTerm == undefined) {
+		query = {
+			bool: {
+				must: [
+					{
+						match: {
+							isPublic: {
+								query: true
 							}
 						}
-					],
-				},
-			},
-			highlight: { fields: { title: {} } },
-		});
-	},
-	mostRecent: (params: SearchParams) => {
-		return client.search({
-			from: params.offset,
-			index: index, _source: {
-				"excludes": ["*.password", "*.torrents", "*.executables"]
-			},
-			query: {
-				bool: {
-					must: [
-						{ match_all: {} },
-						{
-							match: {
-								isPublic: {
-									query: true
-								}
+					}
+				],
+			}
+		}
+	}
+
+	return client.search({
+		from: params.offset,
+		index: index,
+		_source: {
+			"excludes": ["*.password", "*.torrents", "*.executables"]
+		},
+		query: query,
+		highlight: { fields: { title: {} } },
+	});
+}
+const getInstallData = (params: GetInstallDataRequest) => {
+	// need to make this permissioned
+	console.log("getInstallData", params)
+	return client.search({
+		index: index,
+		query: {
+			bool: {
+				must: [
+					{
+						match: {
+							productId: {
+								query: params['media[productId]']
 							}
 						}
-					],
-				},
-			},
-			highlight: { fields: { title: {} } },
-		});
-	},
-	installData: (params: InstallDataParams) => {
-		return client.search({
-			index: index,
-			query: {
-				bool: {
-					must: [
-						{
-							match: {
-								productId: {
-									query: params.productId
-								}
-							}
-						},
-						{
-							match: {
-								isPublic: {
-									query: true
-								}
+					},
+					{
+						match: {
+							isPublic: {
+								query: true
 							}
 						}
-					],
-				},
+					}
+				],
 			},
-			highlight: { fields: { title: {} } },
-		});
-	},
+		},
+		highlight: { fields: { title: {} } },
+	});
 };
 
-const listing = {
-	requestListing: (params: RequestListingOrUpdateParams) => {
-		return client.index({
-			index: 'listings',
-			id: params.media.productId,
-			document: { ...params.media, isPublic: true },
-		});
-	},
-	update: (params: RequestListingOrUpdateParams) => {
-		return client.update({
-			index: 'listings',
-			id: params.media.productId,
-			doc: params.media,
-		});
-	},
-	setMediaPublic: (params: SetMediaPublicParams) => {
-		return client.update({
-			index: 'listings',
-			id: params.productId,
-			doc: { isPublic: params.isPublic },
-		});
-	},
-};
+const requestListing = (params: RequestListingOrUpdateRequest) => {
+	// need to make setting this permissioned
+	return client.index({
+		index: 'listings',
+		id: params.media.productId,
+		document: { ...params.media, isPublic: params.setPublic },
+	});
+}
+const update = (params: RequestListingOrUpdateRequest) => {
+	// need to make setting this permissioned
+	return client.update({
+		index: 'listings',
+		id: params.media.productId,
+		doc: { ...params.media, isPublic: params.setPublic },
+	});
+}
+const setMediaPublic = (params: SetMediaPublicRequest) => {
+	return client.update({
+		index: 'listings',
+		id: params.media.productId,
+		doc: { isPublic: params.isPublic },
+	});
+}
 
 
 export { router };

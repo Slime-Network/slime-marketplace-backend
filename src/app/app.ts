@@ -11,6 +11,7 @@ const port = process.env.PORT || 5233;
 // Set permissive CORS header
 app.use(async (ctx, next) => {
 	ctx.set('Access-Control-Allow-Origin', '*');
+	ctx.set('Access-Control-Allow-Credentials', 'true');
 	ctx.set('Max-Http-Header-Size', '1000000000');
 	return next();
 });

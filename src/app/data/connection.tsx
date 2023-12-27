@@ -1,4 +1,5 @@
-import { Client } from '@elastic/elasticsearch';
+import { Client, NodeOptions } from '@elastic/elasticsearch';
+import { IndicesPutMappingRequest } from '@elastic/elasticsearch/lib/api/types';
 
 const index = 'listings';
 const type = 'media';
@@ -7,8 +8,10 @@ const host = process.env.ES_HOST || 'localhost';
 
 console.log("Connected to Elasticsearch: " + "http://" + host + ':' + port)
 const client = new Client({
-	node: "http://" + host + ':' + port,
-
+	node: {
+		url: new URL("http://" + host + ':' + port),
+		id: 'es-client',
+	} as NodeOptions,
 });
 
 const checkConnection = async () => {
@@ -19,11 +22,17 @@ const checkConnection = async () => {
 			const health = await client.cluster.health({});
 			console.log(health);
 			isConnected = true;
-		} catch (err) {
+		} catch (err: any) {
 			console.log('Connection Failed, Retrying...', err);
 		}
+		await new Promise(resolve => setTimeout(resolve, 1000 * 10));
+	}
+	if (!await client.indices.exists({ index })) {
+		putMediaMapping(index);
 	}
 };
+
+checkConnection();
 
 const resetIndex = async () => {
 	if (await client.indices.exists({ index })) {
@@ -35,6 +44,7 @@ const resetIndex = async () => {
 };
 
 const putMediaMapping = async (i: string) => {
+
 	const schema = {
 		banner: { type: 'text' },
 		businessEmail: { type: 'text' },
@@ -68,8 +78,8 @@ const putMediaMapping = async (i: string) => {
 		website: { type: 'keyword' },
 		version: { type: 'text' },
 	};
-
-	return client.indices.putMapping({ index, dynamic: true });
+	console.log('Creating index...');
+	return client.indices.putMapping({ index, dynamic: true, properties: schema } as IndicesPutMappingRequest);
 };
 
 export { client, checkConnection, resetIndex, index, type };

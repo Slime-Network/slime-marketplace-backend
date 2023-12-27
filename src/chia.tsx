@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Media } from '../spriggan-shared/types/Media'
+import { Media } from '../gosti-shared/types/gosti/Media'
 
 const host = 'localhost'
 const datalayerPort = 8562
@@ -10,7 +10,7 @@ const subscribeToDatalayer = async () => {
 		.then(res => {
 			console.log(res);
 		}
-	)
+		)
 }
 
 export default subscribeToDatalayer;
