@@ -1,3 +1,6 @@
 [submodule "gosti-shared"]
 	path = gosti-shared
 	url = https://github.com/Open-Market-Dev-Club/gosti-shared.git
+[submodule "src/gosti-shared"]
+	path = src/gosti-shared
+	url = https://github.com/Gosti-Network/gosti-shared.git

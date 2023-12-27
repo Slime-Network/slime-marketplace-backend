@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { resetIndex, client } from './app/data/connection';
-import { Media } from '../gosti-shared/types/gosti/Media';
+import { Media } from 'gosti-shared/types/gosti/Media';
 
 const readAndInsertMedias = async () => {
 	try {

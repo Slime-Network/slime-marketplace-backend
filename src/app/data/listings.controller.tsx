@@ -5,7 +5,7 @@ import Koa from 'koa';
 import Router from 'koa-router';
 import { RPCAgent, ErrorResponse } from 'chia-agent';
 import { get_recent_signage_point_or_eos, verify_signature, subscriptions } from 'chia-agent/api/rpc';
-import { Media } from '../../../gosti-shared/types/gosti/Media';
+import { Media } from '../../gosti-shared/types/gosti/Media';
 import { QueryDslQueryContainer, Sort } from '@elastic/elasticsearch/lib/api/types';
 import { param } from 'koa-req-validation';
 
