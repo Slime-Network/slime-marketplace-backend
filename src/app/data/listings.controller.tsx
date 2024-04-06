@@ -1,27 +1,24 @@
-import { client, checkConnection, index } from './connection';
-import { SearchRequest, GetInstallDataRequest, RequestListingOrUpdateRequest, SetMediaPublicRequest, GetSignMessageRequest, SortOptions } from '../../../gosti-shared/types/gosti/MarketplaceApiTypes';
+import { client, index } from './connection';
+import { SearchRequest, GetInstallDataRequest, RequestListingOrUpdateRequest, SetMediaPublicRequest, GetSignMessageRequest, SortOptions } from '../../gosti-shared/types/gosti/MarketplaceApiTypes';
 
 import Koa from 'koa';
 import Router from 'koa-router';
-import { RPCAgent, ErrorResponse } from 'chia-agent';
-import { get_recent_signage_point_or_eos, verify_signature, subscriptions } from 'chia-agent/api/rpc';
 import { Media } from '../../gosti-shared/types/gosti/Media';
 import { QueryDslQueryContainer, Sort } from '@elastic/elasticsearch/lib/api/types';
-import { param } from 'koa-req-validation';
 
 const routerOpts: Router.IRouterOptions = {
 	prefix: '/listings',
 };
 
-const router: Router = new Router(routerOpts);
+const listingsRouter: Router = new Router(routerOpts);
 
-router.get('/search', async (ctx: Koa.Context) => {
+listingsRouter.get('/search', async (ctx: Koa.Context) => {
 	const searchParams = ctx.request.query as unknown as SearchRequest;
 	console.log('Search params: ', searchParams);
 	ctx.body = await queryTerm(searchParams);
 });
 
-router.get('/getSignMessage', async (ctx: Koa.Context) => {
+listingsRouter.get('/getSignMessage', async (ctx: Koa.Context) => {
 	ctx.body = buildSignatureMessage((ctx.request.query as unknown as GetSignMessageRequest).media);
 });
 
@@ -34,7 +31,7 @@ const buildSignatureMessage = (media: Media) => {
 	return message;
 }
 
-router.get('/getInstallData', async (ctx: Koa.Context) => {
+listingsRouter.get('/getInstallData', async (ctx: Koa.Context) => {
 	const params = ctx.request.query as unknown as GetInstallDataRequest;
 
 	try {
@@ -54,7 +51,7 @@ router.get('/getInstallData', async (ctx: Koa.Context) => {
 });
 
 
-router.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
+listingsRouter.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
 	let params = undefined
 	try {
 		params = (ctx.request.body as any).params as RequestListingOrUpdateRequest
@@ -83,7 +80,7 @@ router.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
 	}
 });
 
-router.get('/setMediaPublic', async (ctx: Koa.Context) => {
+listingsRouter.get('/setMediaPublic', async (ctx: Koa.Context) => {
 	const requestParams = ctx.request.query as unknown as SetMediaPublicRequest;
 	// need to make this permissioned
 	console.log("setMediaPublic", requestParams);
@@ -189,7 +186,7 @@ const queryTerm = (params: SearchRequest) => {
 		highlight: { fields: { title: {} } },
 	});
 }
-const getInstallData = (params: GetInstallDataRequest) => {
+const getInstallData = (params: any) => {
 	// need to make this permissioned
 	console.log("getInstallData", params)
 	return client.search({
@@ -243,6 +240,6 @@ const setMediaPublic = (params: SetMediaPublicRequest) => {
 }
 
 
-export { router };
+export { listingsRouter };
 
 

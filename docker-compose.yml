@@ -14,6 +14,7 @@ services:
    - PORT=5233
   volumes: # Attach local game data directory
    - ./games:/usr/src/app/games
+   - ./public:/usr/src/app/public
 
  elasticsearch: # Elasticsearch Instance
   container_name: marketplace-search

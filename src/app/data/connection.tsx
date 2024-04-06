@@ -28,19 +28,33 @@ const checkConnection = async () => {
 		await new Promise(resolve => setTimeout(resolve, 1000 * 10));
 	}
 	if (!await client.indices.exists({ index })) {
+		await client.indices.delete({ index });
 		putMediaMapping(index);
 	}
+	if (!await client.indices.exists({ index: 'files' })) {
+		console.log("Creating files index")
+		await client.indices.create({ index: 'files' });
+		putFileMapping('files');
+	}
+	// resetIndex();
 };
 
 checkConnection();
 
 const resetIndex = async () => {
+	console.log('Resetting index...');
 	if (await client.indices.exists({ index })) {
 		await client.indices.delete({ index });
 	}
 
+	if (await client.indices.exists({ index: 'files' })) {
+		await client.indices.delete({ index: 'files' });
+	}
+
 	await client.indices.create({ index });
+	await client.indices.create({ index: 'files' });
 	await putMediaMapping(index);
+	await putFileMapping('files');
 };
 
 const putMediaMapping = async (i: string) => {
@@ -59,8 +73,8 @@ const putMediaMapping = async (i: string) => {
 		icon: { type: 'text' },
 		instagram: { type: 'keyword' },
 		isPublic: { type: 'boolean' },
-		lastUpdated: { type: 'number' },
-		lastUpdatedContent: { type: 'number' },
+		lastUpdated: { type: 'long' },
+		lastUpdatedContent: { type: 'long' },
 		longDescription: { type: 'text' },
 		password: { type: 'text' },
 		paymentAddress: { type: 'keyword' },
@@ -80,6 +94,16 @@ const putMediaMapping = async (i: string) => {
 	};
 	console.log('Creating index...');
 	return client.indices.putMapping({ index, dynamic: true, properties: schema } as IndicesPutMappingRequest);
+};
+
+const putFileMapping = async (i: string) => {
+
+	const schema = {
+		hash: { type: 'text' },
+		files: { type: 'binary' },
+	};
+	console.log('Creating index...');
+	return client.indices.putMapping({ index: i, dynamic: false, properties: schema } as IndicesPutMappingRequest);
 };
 
 export { client, checkConnection, resetIndex, index, type };
