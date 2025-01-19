@@ -1,31 +1,140 @@
 {
-	"productId": "db05dff3-9f42-45b3-9e80-6cdbc038faf7",
-	"datastoreId": "56785679",
-	"title": "Stardew Valley",
-	"publisher": "ConcernedApe",
-	"creator": "ConcernedApe",
-	"shortDescription": "You've inherited your grandfather's old farm plot in Stardew Valley",
-	"description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
-	"longDescription": "About This Game\n---------------\nStardew Valley is an open-ended country-life RPG!  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/413150/extras/animalStrip2.png?t=1666917466)  \n  \nYou've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!  \n  \n**Features**  \n*   **Turn your overgrown field into a lively farm!** Raise animals, grow crops, start an orchard, craft useful machines, and more! You'll have plenty of space to create the farm of your dreams.  \n      \n    \n*   **4 Player Farming!** Invite 1-3 players to join you in the valley online! Players can work together to build a thriving farm, share resources, and improve the local community. As more hands are better than one, players have the option to scale profit margin on produce sold for a more challenging experience.  \n      \n    \n*   **Improve your skills over time.** As you make your way from a struggling greenhorn to a master farmer, you'll level up in 5 different areas: farming, mining, combat, fishing, and foraging. As you progress, you'll learn new cooking and crafting recipes, unlock new areas to explore, and customize your skills by choosing from a variety of professions.  \n      \n    \n*   **Become part of the local community.** With over 30 unique characters living in Stardew Valley, you won't have a problem finding new friends! Each person has their own daily schedule, birthday, unique mini-cutscenes, and new things to say throughout the week and year. As you make friends with them, they will open up to you, ask you for help with their personal troubles, or tell you their secrets! Take part in seasonal festivals such as the luau, haunted maze, and feast of the winter star.  \n      \n    \n*   **Explore a vast, mysterious cave.** As you travel deeper underground, you'll encounter new and dangerous monsters, powerful weapons, new environments, valuable gemstones, raw materials for crafting and upgrading tools, and mysteries to be uncovered.  \n      \n    \n*   **Breathe new life into the valley.** Since JojaMart opened, the old way of life in Stardew Valley has changed. Much of the town's infrastructure has fallen into disrepair. Help restore Stardew Valley to it's former glory by repairing the old community center, or take the alternate route and join forces with Joja Corporation.  \n      \n    \n*   **Court and marry a partner to share your life on the farm with.** There are 12 available bachelors and bachelorettes to woo, each with unique character progression cutscenes. Once married, your partner will live on the farm with you. Who knows, maybe you'll have kids and start a family?  \n      \n    \n*   **Spend a relaxing afternoon at one of the local fishing spots.** The waters are teeming with seasonal varieties of delicious fish. Craft bait, bobbers, and crab pots to help you in your journey toward catching every fish and becoming a local legend!  \n      \n    \n*   **Donate artifacts and minerals to the local museum.**  \n      \n    \n*   **Cook delicious meals and craft useful items to help you out.** With over 100 cooking and crafting recipes, you'll have a wide variety of items to create. Some dishes you cook will even give you temporary boosts to skills, running speed, or combat prowess. Craft useful objects like scarecrows, oil makers, furnaces, or even the rare and expensive crystalarium.  \n      \n    \n*   **Customize the appearance of your character and house.** With hundreds of decorative items to choose from, you'll have no trouble creating the home of your dreams!  \n      \n    \n*   **Xbox controller support (with rumble)! (Keyboard still required for text input)**  \n      \n    \n*   **Over two hours of original music.**",
-	"website": "https://indiepogo.com/",
-	"twitter": "@ConcernedApe",
-	"discord": "https://discordapp.com/invite/StardewValley",
-	"instagram": "@ConcernedApe",
-	"publisherDid": "did:chia:1e504kjvgu04927k36rstc60uy86y44ff2mxzvh37gtmde8u5clus7yjwm6",
-	"contentRating": "E 10+",
-	"capsuleImage": "https://cdn.akamai.steamstatic.com/steam/apps/413150/capsule_616x353.jpg?t=1666917466",
-	"icon": "https://i.imgur.com/Z8UT1Lx.png",
-	"tags": "indie, action, fighting, pixel graphics, 2d, multiplayer, platformer, singleplayer, crowdfunded, great soundtrack, 2D fighter, local multiplayer",
-	"trailer": "ot7uXNQskhs",
-	"trailerSource": "youtube",
-	"status": "Complete",
-	"version": "1.0",
-	"screenshots": "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_b887651a93b0525739049eb4194f633de2df75be.1920x1080.jpg?t=1666917466, https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_9ac899fe2cda15d48b0549bba77ef8c4a090a71c.1920x1080.jpg?t=1666917466, https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_4fa0866709ede3753fdf2745349b528d5e8c4054.1920x1080.jpg?t=1666917466",
-	"paymentAddress": "xch1w89m85c6kr7w4jtff5r53lfardjcawsnrdnxh5ke9aeqnaeddphqjez9jh",
-	"password": "password123",
+	"mediaType": "game",
 	"isPublic": true,
-	"supportEmail": "hello@example.com",
-	"businessEmail": "hello@example.com",
-	"lastUpdated": 12342,
-	"lastUpdatedContent": 12343
+	"datastoreId": "56785679",
+	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6",
+	"contentRating": {
+		"type": "ESRB",
+		"rating": "T",
+		"link": ""
+	},
+	"descriptions": [
+		{
+			"type": "short",
+			"description": "You've inherited your grandfather's old farm plot in Stardew Valley",
+			"markdown": false,
+			"language": "English"
+		},
+		{
+			"type": "medium",
+			"description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+			"markdown": false,
+			"language": "English"
+		},
+		{
+			"type": "long",
+			"description": "Stardew Valley is an open-ended country-life RPG!  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/413150/extras/animalStrip2.png?t=1666917466)  \n  \nYou've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!  \n  \n**Features**  \n*   **Turn your overgrown field into a lively farm!** Raise animals, grow crops, start an orchard, craft useful machines, and more! You'll have plenty of space to create the farm of your dreams.  \n      \n    \n*   **4 Player Farming!** Invite 1-3 players to join you in the valley online! Players can work together to build a thriving farm, share resources, and improve the local community. As more hands are better than one, players have the option to scale profit margin on produce sold for a more challenging experience.  \n      \n    \n*   **Improve your skills over time.** As you make your way from a struggling greenhorn to a master farmer, you'll level up in 5 different areas: farming, mining, combat, fishing, and foraging. As you progress, you'll learn new cooking and crafting recipes, unlock new areas to explore, and customize your skills by choosing from a variety of professions.  \n      \n    \n*   **Become part of the local community.** With over 30 unique characters living in Stardew Valley, you won't have a problem finding new friends! Each person has their own daily schedule, birthday, unique mini-cutscenes, and new things to say throughout the week and year. As you make friends with them, they will open up to you, ask you for help with their personal troubles, or tell you their secrets! Take part in seasonal festivals such as the luau, haunted maze, and feast of the winter star.  \n      \n    \n*   **Explore a vast, mysterious cave.** As you travel deeper underground, you'll encounter new and dangerous monsters, powerful weapons, new environments, valuable gemstones, raw materials for crafting and upgrading tools, and mysteries to be uncovered.  \n      \n    \n*   **Breathe new life into the valley.** Since JojaMart opened, the old way of life in Stardew Valley has changed. Much of the town's infrastructure has fallen into disrepair. Help restore Stardew Valley to it's former glory by repairing the old community center, or take the alternate route and join forces with Joja Corporation.  \n      \n    \n*   **Court and marry a partner to share your life on the farm with.** There are 12 available bachelors and bachelorettes to woo, each with unique character progression cutscenes. Once married, your partner will live on the farm with you. Who knows, maybe you'll have kids and start a family?  \n      \n    \n*   **Spend a relaxing afternoon at one of the local fishing spots.** The waters are teeming with seasonal varieties of delicious fish. Craft bait, bobbers, and crab pots to help you in your journey toward catching every fish and becoming a local legend!  \n      \n    \n*   **Donate artifacts and minerals to the local museum.**  \n      \n    \n*   **Cook delicious meals and craft useful items to help you out.** With over 100 cooking and crafting recipes, you'll have a wide variety of items to create. Some dishes you cook will even give you temporary boosts to skills, running speed, or combat prowess. Craft useful objects like scarecrows, oil makers, furnaces, or even the rare and expensive crystalarium.  \n      \n    \n*   **Customize the appearance of your character and house.** With hundreds of decorative items to choose from, you'll have no trouble creating the home of your dreams!  \n      \n    \n*   **Xbox controller support (with rumble)! (Keyboard still required for text input)**  \n      \n    \n*   **Over two hours of original music.**",
+			"markdown": true,
+			"language": "English"
+		}
+	],
+	"credits": [
+		{
+			"role": "publisher",
+			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
+		},
+		{
+			"role": "artist",
+			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
+		}
+	],
+	"executables": [
+		{
+			"platform": "windows",
+			"command": "StardewValley.exe"
+		},
+		{
+			"platform": "mac",
+			"command": "StardewValley.app"
+		},
+		{
+			"platform": "linux",
+			"command": "StardewValley"
+		}
+	],
+	"images": [
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/413150/capsule_616x353.jpg?t=1666917466",
+			"type": "capsule",
+			"source": "img",
+			"alt": "Stardew Valley",
+			"language": "English"
+		},
+		{
+			"url": "https://i.imgur.com/Z8UT1Lx.png",
+			"type": "icon",
+			"source": "img",
+			"alt": "Stardew Valley",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_b887651a93b0525739049eb4194f633de2df75be.1920x1080.jpg?t=1666917466",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Stardew Valley",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_9ac899fe2cda15d48b0549bba77ef8c4a090a71c.1920x1080.jpg?t=1666917466",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Stardew Valley",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_4fa0866709ede3753fdf2745349b528d5e8c4054.1920x1080.jpg?t=1666917466",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Stardew Valley",
+			"language": "English"
+		}
+	],
+	"videos": [
+		{
+			"type": "trailer",
+			"url": "https://www.youtube.com/watch?v=ot7uXNQskhs",
+			"source": "youtube",
+			"alt": "Stray",
+			"language": "English"
+		}
+	],
+	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
+	"parentProductId": "",
+	"productId": "927B6E97-51AF-6824-A7B9-8D855281D990",
+	"publisherDid": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
+	"releaseStatus": "Available",
+	"supportContact": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
+	"tags": [
+		{
+			"tag": "exploration",
+			"weight": "10",
+			"type": "genre"
+		},
+		{
+			"tag": "adventure",
+			"weight": "10",
+			"type": "genre"
+		}
+	],
+	"titles": [
+		{
+			"title": "Stardew Valley",
+			"language": "English"
+		}
+	],
+	"torrents": [
+		{
+			"platform": "windows",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		},
+		{
+			"platform": "mac",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		},
+		{
+			"platform": "linux",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		}
+	],
+	"version": "1.2"
 }

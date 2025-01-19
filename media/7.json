@@ -1,31 +1,150 @@
 {
-	"productId": "20220630143432_8e0cf067ccd7d26803b31493fffa62b5",
-	"datastoreId": "56785679",
-	"title": "Hollow Knight",
-	"publisher": "Team Cherry",
-	"creator": "Team Cherry",
-	"shortDescription": "An epic action adventure through a vast ruined kingdom",
-	"description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
-	"longDescription": "About This Game\n---------------\n\nHollow Knight Expands with Free Content\n---------------------------------------\n\n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_gg.png?t=1667006028)  \n**Godmaster** - Take your place amongst the Gods. New Characters and Quest. New Boss Fights. Available Now!  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_lifeblood.png?t=1667006028)  \n**Lifeblood** - A Kingdom Upgraded! New Boss. Upgraded Bosses. Tweaks and Refinements across the whole game.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_grimm.png?t=1667006028)  \n**The Grimm Troupe** - Light the Nightmare Lantern. Summon the Troupe. New Major Quest. New Boss Fights. New Charms. New Enemies. New Friends.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_hidden_dreams.png?t=1667006028)  \n**Hidden Dreams** - Mighty new foes emerge! New Boss fights. New Upgrades. New Music.\n\nBrave the Depths of a Forgotten Kingdom\n---------------------------------------\n\nBeneath the fading town of Dirtmouth sleeps an ancient, ruined kingdom. Many are drawn below the surface, searching for riches, or glory, or answers to old secrets.  \n  \n  \nHollow Knight is a classically styled 2D action adventure across a vast interconnected world. Explore twisting caverns, ancient cities and deadly wastes; battle tainted creatures and befriend bizarre bugs; and solve ancient mysteries at the kingdom's heart.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0002_4.jpg?t=1667006028)\n\nGame Features\n-------------\n\n*   Classic side-scrolling action, with all the modern trimmings.  \n\n*   Tightly tuned 2D controls. Dodge, dash and slash your way through even the most deadly adversaries.  \n\n*   Explore a vast interconnected world of forgotten highways, overgrown wilds and ruined cities.  \n\n*   Forge your own path! The world of Hallownest is expansive and open. Choose which paths you take, which enemies you face and find your own way forward.  \n\n*   Evolve with powerful new skills and abilities! Gain spells, strength and speed. Leap to new heights on ethereal wings. Dash forward in a blazing flash. Blast foes with fiery Soul!  \n\n*   Equip Charms! Ancient relics that offer bizarre new powers and abilities. Choose your favourites and make your journey unique!  \n\n*   An enormous cast of cute and creepy characters all brought to life with traditional 2D frame-by-frame animation.  \n\n*   Over 130 enemies! 30 epic bosses! Face ferocious beasts and vanquish ancient knights on your quest through the kingdom. Track down every last twisted foe and add them to your Hunter's Journal!  \n\n*   Leap into minds with the Dream Nail. Uncover a whole other side to the characters you meet and the enemies you face.  \n\n*   Beautiful painted landscapes, with extravagant parallax, give a unique sense of depth to a side-on world.  \n\n*   Chart your journey with extensive mapping tools. Buy compasses, quills, maps and pins to enhance your understanding of Hollow Knight’s many twisting landscapes.  \n\n*   A haunting, intimate score accompanies the player on their journey, composed by Christopher Larkin. The score echoes the majesty and sadness of a civilisation brought to ruin.  \n\n*   Complete Hollow Knight to unlock Steel Soul Mode, the ultimate challenge!\n\n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0003_3.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0001_5.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/fleur_divider.png?t=1667006028)\n\nAn Evocative Hand-Crafted World\n-------------------------------\n\nThe world of Hollow Knight is brought to life in vivid, moody detail, its caverns alive with bizarre and terrifying creatures, each animated by hand in a traditional 2D style.  \n  \n  \nEvery new area you’ll discover is beautifully unique and strange, teeming with new creatures and characters. Take in the sights and uncover new wonders hidden off of the beaten path.  \n  \nIf you like classic gameplay, cute but creepy characters, epic adventure and beautiful, gothic worlds, then Hollow Knight awaits!  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0000_62.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0004_2.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0005_1.jpg?t=1667006028)",
-	"website": "https://www.hollowknight.com/",
-	"twitter": "@TeamCherryGames",
-	"discord": "",
-	"instagram": "@TeamCherryGames",
-	"publisherDid": "did:chia:1x38x308499g5szp48gcg8pkpyssp4r0gx0f5yl738atz677k48ksjxh4u8",
-	"contentRating": "E 10+",
-	"capsuleImage": "https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_231x87.jpg?t=1667006028",
-	"icon": "https://i.imgur.com/Z8UT1Lx.png",
-	"tags": "Metroidvania, souls-like, platformer, great soundtrack, difficult, 2d, indie, atmospheric, singleplayer, exploration, adventure, story rich, hand-drawn, action, multiple endings, dark fantasy, open world, cute, controller, side scroller",
-	"trailer": "JuP47fRBsWg",
-	"trailerSource": "youtube",
-	"status": "Complete",
-	"version": "1.0",
-	"screenshots": "https://cdn.akamai.steamstatic.com/steam/apps/367520/ss_5384f9f8b96a0b9934b2bc35a4058376211636d2.1920x1080.jpg?t=1667006028, https://cdn.akamai.steamstatic.com/steam/apps/367520/ss_d5b6edd94e77ba6db31c44d8a3c09d807ab27751.1920x1080.jpg?t=1667006028, https://cdn.akamai.steamstatic.com/steam/apps/367520/ss_a81e4231cc8d55f58b51a4a938898af46503cae5.1920x1080.jpg?t=1667006028",
-	"paymentAddress": "xch1w89m85c6kr7w4jtff5r53lfardjcawsnrdnxh5ke9aeqnaeddphqjez9jh",
-	"password": "password123",
+	"mediaType": "game",
 	"isPublic": true,
-	"supportEmail": "hello@example.com",
-	"businessEmail": "hello@example.com",
-	"lastUpdated": 12341,
-	"lastUpdatedContent": 12341
+	"datastoreId": "56785679",
+	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7",
+	"contentRating": {
+		"type": "ESRB",
+		"rating": "E",
+		"link": ""
+	},
+	"descriptions": [
+		{
+			"type": "short",
+			"description": "An epic action adventure through a vast ruined kingdom",
+			"markdown": false,
+			"language": "English"
+		},
+		{
+			"type": "medium",
+			"description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
+			"markdown": false,
+			"language": "English"
+		},
+		{
+			"type": "long",
+			"description": "Hollow Knight Expands with Free Content\n---------------------------------------\n\n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_gg.png?t=1667006028)  \n**Godmaster** - Take your place amongst the Gods. New Characters and Quest. New Boss Fights. Available Now!  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_lifeblood.png?t=1667006028)  \n**Lifeblood** - A Kingdom Upgraded! New Boss. Upgraded Bosses. Tweaks and Refinements across the whole game.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_grimm.png?t=1667006028)  \n**The Grimm Troupe** - Light the Nightmare Lantern. Summon the Troupe. New Major Quest. New Boss Fights. New Charms. New Enemies. New Friends.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_hidden_dreams.png?t=1667006028)  \n**Hidden Dreams** - Mighty new foes emerge! New Boss fights. New Upgrades. New Music.\n\nBrave the Depths of a Forgotten Kingdom\n---------------------------------------\n\nBeneath the fading town of Dirtmouth sleeps an ancient, ruined kingdom. Many are drawn below the surface, searching for riches, or glory, or answers to old secrets.  \n  \n  \nHollow Knight is a classically styled 2D action adventure across a vast interconnected world. Explore twisting caverns, ancient cities and deadly wastes; battle tainted creatures and befriend bizarre bugs; and solve ancient mysteries at the kingdom's heart.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0002_4.jpg?t=1667006028)\n\nGame Features\n-------------\n\n*   Classic side-scrolling action, with all the modern trimmings.  \n\n*   Tightly tuned 2D controls. Dodge, dash and slash your way through even the most deadly adversaries.  \n\n*   Explore a vast interconnected world of forgotten highways, overgrown wilds and ruined cities.  \n\n*   Forge your own path! The world of Hallownest is expansive and open. Choose which paths you take, which enemies you face and find your own way forward.  \n\n*   Evolve with powerful new skills and abilities! Gain spells, strength and speed. Leap to new heights on ethereal wings. Dash forward in a blazing flash. Blast foes with fiery Soul!  \n\n*   Equip Charms! Ancient relics that offer bizarre new powers and abilities. Choose your favourites and make your journey unique!  \n\n*   An enormous cast of cute and creepy characters all brought to life with traditional 2D frame-by-frame animation.  \n\n*   Over 130 enemies! 30 epic bosses! Face ferocious beasts and vanquish ancient knights on your quest through the kingdom. Track down every last twisted foe and add them to your Hunter's Journal!  \n\n*   Leap into minds with the Dream Nail. Uncover a whole other side to the characters you meet and the enemies you face.  \n\n*   Beautiful painted landscapes, with extravagant parallax, give a unique sense of depth to a side-on world.  \n\n*   Chart your journey with extensive mapping tools. Buy compasses, quills, maps and pins to enhance your understanding of Hollow Knight’s many twisting landscapes.  \n\n*   A haunting, intimate score accompanies the player on their journey, composed by Christopher Larkin. The score echoes the majesty and sadness of a civilisation brought to ruin.  \n\n*   Complete Hollow Knight to unlock Steel Soul Mode, the ultimate challenge!\n\n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0003_3.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0001_5.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/fleur_divider.png?t=1667006028)\n\nAn Evocative Hand-Crafted World\n-------------------------------\n\nThe world of Hollow Knight is brought to life in vivid, moody detail, its caverns alive with bizarre and terrifying creatures, each animated by hand in a traditional 2D style.  \n  \n  \nEvery new area you’ll discover is beautifully unique and strange, teeming with new creatures and characters. Take in the sights and uncover new wonders hidden off of the beaten path.  \n  \nIf you like classic gameplay, cute but creepy characters, epic adventure and beautiful, gothic worlds, then Hollow Knight awaits!  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0000_62.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0004_2.jpg?t=1667006028)  \n![](https://cdn.akamai.steamstatic.com/steam/apps/367520/extras/banner_pics_0005_1.jpg?t=1667006028)",
+			"markdown": true,
+			"language": "English"
+		}
+	],
+	"credits": [
+		{
+			"role": "publisher",
+			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
+		},
+		{
+			"role": "artist",
+			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
+		}
+	],
+	"executables": [
+		{
+			"platform": "windows",
+			"command": "HollowKnight.exe"
+		},
+		{
+			"platform": "mac",
+			"command": "HollowKnight.app"
+		},
+		{
+			"platform": "linux",
+			"command": "HollowKnight"
+		}
+	],
+	"images": [
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_231x87.jpg?t=1667006028",
+			"type": "capsule",
+			"source": "img",
+			"alt": "Hollow Knight",
+			"language": "English"
+		},
+		{
+			"url": "https://i.imgur.com/Z8UT1Lx.png",
+			"type": "icon",
+			"source": "img",
+			"alt": "Hollow Knight",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/367520/ss_5384f9f8b96a0b9934b2bc35a4058376211636d2.1920x1080.jpg?t=1667006028",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Hollow Knight",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/367520/ss_d5b6edd94e77ba6db31c44d8a3c09d807ab27751.1920x1080.jpg?t=1667006028",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Hollow Knight",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/367520/ss_a81e4231cc8d55f58b51a4a938898af46503cae5.1920x1080.jpg?t=1667006028",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Hollow Knight",
+			"language": "English"
+		}
+	],
+	"videos": [
+		{
+			"type": "trailer",
+			"url": "https://www.youtube.com/watch?v=JuP47fRBsWg",
+			"source": "youtube",
+			"alt": "Hollow Knight",
+			"language": "English"
+		}
+	],
+	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
+	"parentProductId": "",
+	"productId": "20220630143432_8e0cf067ccd7d26803b31493fffa62b5",
+	"publisherDid": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
+	"releaseStatus": "Available",
+	"supportContact": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
+	"tags": [
+		{
+			"tag": "action",
+			"weight": "10",
+			"type": "genre"
+		},
+		{
+			"tag": "adventure",
+			"weight": "10",
+			"type": "genre"
+		},
+		{
+			"tag": "platformer",
+			"weight": "10",
+			"type": "genre"
+		},
+		{
+			"tag": "singleplayer",
+			"weight": "10",
+			"type": "feature"
+		}
+	],
+	"titles": [
+		{
+			"title": "Hollow Knight",
+			"language": "English"
+		}
+	],
+	"torrents": [
+		{
+			"platform": "windows",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		},
+		{
+			"platform": "mac",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		},
+		{
+			"platform": "linux",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		}
+	],
+	"version": "1.2"
 }

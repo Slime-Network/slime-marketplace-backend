@@ -2,8 +2,8 @@ version: '3'
 
 services:
  api: # Node.js App
-  container_name: gosti-marketplace-backend-api
-  image: gaerax/gosti-marketplace-backend-api:latest
+  container_name: slime-marketplace-backend-api
+  image: slimenetwork/slime-marketplace-backend-api:latest
   build: .
   ports:
    - '5233:5233' # Expose API port
@@ -18,8 +18,8 @@ services:
 
  elasticsearch: # Elasticsearch Instance
   container_name: marketplace-search
-  image: docker.elastic.co/elasticsearch/elasticsearch:8.6.1
-  volumes: # Persist ES data in seperate "esdata" volume
+  image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
+  volumes: # Persist ES data in separate "esdata" volume
    - esdata:/usr/share/elasticsearch/data
   environment:
    - xpack.security.enabled=false

@@ -1,9 +1,16 @@
 import { client, index } from './connection';
-import { SearchRequest, GetInstallDataRequest, RequestListingOrUpdateRequest, SetMediaPublicRequest, GetSignMessageRequest, SortOptions } from '../../gosti-shared/types/gosti/MarketplaceApiTypes';
+import {
+	SearchRequest,
+	GetInstallDataRequest,
+	RequestListingOrUpdateRequest,
+	SetMediaPublicRequest,
+	GetSignMessageRequest,
+	SortOptions,
+} from '../../slime-shared/types/slime/MarketplaceApiTypes';
 
 import Koa from 'koa';
 import Router from 'koa-router';
-import { Media } from '../../gosti-shared/types/gosti/Media';
+import { Media } from '../../slime-shared/types/slime/Media';
 import { QueryDslQueryContainer, Sort } from '@elastic/elasticsearch/lib/api/types';
 
 const routerOpts: Router.IRouterOptions = {
@@ -26,10 +33,10 @@ const buildSignatureMessage = (media: Media) => {
 	const date = new Date();
 	const roundedDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), 0, 0, 0);
 
-	const message = "gosti signature at: " + roundedDate.toString() + " for media: " + media.productId;
-	console.log("message to sign", message)
+	const message = 'slime signature at: ' + roundedDate.toString() + ' for media: ' + media.productId;
+	console.log('message to sign', message);
 	return message;
-}
+};
 
 listingsRouter.get('/getInstallData', async (ctx: Koa.Context) => {
 	const params = ctx.request.query as unknown as GetInstallDataRequest;
@@ -44,18 +51,17 @@ listingsRouter.get('/getInstallData', async (ctx: Koa.Context) => {
 		ctx.status = 200;
 		ctx.body = res;
 	} catch (e) {
-		console.log("error", e)
+		console.log('error', e);
 		ctx.status = 500;
 		ctx.body = e;
 	}
 });
 
-
 listingsRouter.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
-	let params = undefined
+	let params = undefined;
 	try {
-		params = (ctx.request.body as any).params as RequestListingOrUpdateRequest
-		console.log("params", params)
+		params = (ctx.request.body as any).params as RequestListingOrUpdateRequest;
+		console.log('params', params);
 
 		const exists = await client.exists({ index: index, id: params.media.productId });
 
@@ -66,8 +72,7 @@ listingsRouter.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
 
 		// console.log("stores", stores)
 
-
-		console.log("exists", exists)
+		console.log('exists', exists);
 		if (exists) {
 			const res = await update(params);
 			ctx.body = res;
@@ -76,14 +81,14 @@ listingsRouter.post('/requestListingOrUpdate', async (ctx: Koa.Context) => {
 			ctx.body = res;
 		}
 	} catch (e) {
-		console.log("error", e)
+		console.log('error', e);
 	}
 });
 
 listingsRouter.get('/setMediaPublic', async (ctx: Koa.Context) => {
 	const requestParams = ctx.request.query as unknown as SetMediaPublicRequest;
 	// need to make this permissioned
-	console.log("setMediaPublic", requestParams);
+	console.log('setMediaPublic', requestParams);
 	const res = await setMediaPublic(requestParams);
 	ctx.body = res;
 });
@@ -91,51 +96,50 @@ listingsRouter.get('/setMediaPublic', async (ctx: Koa.Context) => {
 const queryTerm = (params: SearchRequest) => {
 	var sort: Sort = [
 		{
-			"lastUpdatedContent": {
-				"order": "desc"
-			}
+			lastUpdatedContent: {
+				order: 'desc',
+			},
 		},
-	]
+	];
 
 	switch (params.sort) {
 		case SortOptions.DateAsc:
 			sort = [
 				{
-					"lastUpdatedContent": {
-						"order": "asc"
-					}
+					lastUpdatedContent: {
+						order: 'asc',
+					},
 				},
-			]
+			];
 			break;
 		case SortOptions.DateDesc:
 			sort = [
 				{
-					"lastUpdatedContent": {
-						"order": "desc"
+					lastUpdatedContent: {
+						order: 'desc',
 					},
 				},
-			]
+			];
 			break;
 		case SortOptions.NameAsc:
 			sort = [
 				{
-					"title.keyword": {
-						"order": "asc"
-					}
+					'title.keyword': {
+						order: 'asc',
+					},
 				},
-			]
+			];
 			break;
 		case SortOptions.NameDesc:
 			sort = [
 				{
-					"title.keyword": {
-						"order": "desc"
-					}
+					'title.keyword': {
+						order: 'desc',
+					},
 				},
-			]
+			];
 			break;
 	}
-
 
 	var query: QueryDslQueryContainer = {
 		bool: {
@@ -147,48 +151,48 @@ const queryTerm = (params: SearchRequest) => {
 							operator: 'and',
 							fuzziness: 'auto',
 						},
-					}
+					},
 				},
 				{
 					match: {
 						isPublic: {
-							query: true
-						}
-					}
-				}
+							query: true,
+						},
+					},
+				},
 			],
-		}
-	}
+		},
+	};
 
-	if (params.titleTerm == "" || params.titleTerm == undefined) {
+	if (params.titleTerm == '' || params.titleTerm == undefined) {
 		query = {
 			bool: {
 				must: [
 					{
 						match: {
 							isPublic: {
-								query: true
-							}
-						}
-					}
+								query: true,
+							},
+						},
+					},
 				],
-			}
-		}
+			},
+		};
 	}
 
 	return client.search({
 		from: params.offset,
 		index: index,
 		_source: {
-			"excludes": ["*.password", "*.torrents", "*.executables"]
+			excludes: ['*.password', '*.torrents', '*.executables'],
 		},
 		query: query,
 		highlight: { fields: { title: {} } },
 	});
-}
+};
 const getInstallData = (params: any) => {
 	// need to make this permissioned
-	console.log("getInstallData", params)
+	console.log('getInstallData', params);
 	return client.search({
 		index: index,
 		query: {
@@ -197,17 +201,17 @@ const getInstallData = (params: any) => {
 					{
 						match: {
 							productId: {
-								query: params['media[productId]']
-							}
-						}
+								query: params['media[productId]'],
+							},
+						},
 					},
 					{
 						match: {
 							isPublic: {
-								query: true
-							}
-						}
-					}
+								query: true,
+							},
+						},
+					},
 				],
 			},
 		},
@@ -222,7 +226,7 @@ const requestListing = (params: RequestListingOrUpdateRequest) => {
 		id: params.media.productId,
 		document: { ...params.media, isPublic: params.setPublic },
 	});
-}
+};
 const update = (params: RequestListingOrUpdateRequest) => {
 	// need to make setting this permissioned
 	return client.update({
@@ -230,16 +234,13 @@ const update = (params: RequestListingOrUpdateRequest) => {
 		id: params.media.productId,
 		doc: { ...params.media, isPublic: params.setPublic },
 	});
-}
+};
 const setMediaPublic = (params: SetMediaPublicRequest) => {
 	return client.update({
 		index: 'listings',
 		id: params.media.productId,
 		doc: { isPublic: params.isPublic },
 	});
-}
-
+};
 
 export { listingsRouter };
-
-

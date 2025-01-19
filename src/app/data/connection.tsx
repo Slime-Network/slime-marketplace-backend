@@ -6,10 +6,10 @@ const type = 'media';
 const port = 9200;
 const host = process.env.ES_HOST || 'localhost';
 
-console.log("Connected to Elasticsearch: " + "http://" + host + ':' + port)
+console.log('Connected to Elasticsearch: ' + 'http://' + host + ':' + port);
 const client = new Client({
 	node: {
-		url: new URL("http://" + host + ':' + port),
+		url: new URL('http://' + host + ':' + port),
 		id: 'es-client',
 	} as NodeOptions,
 });
@@ -25,14 +25,14 @@ const checkConnection = async () => {
 		} catch (err: any) {
 			console.log('Connection Failed, Retrying...', err);
 		}
-		await new Promise(resolve => setTimeout(resolve, 1000 * 10));
+		await new Promise((resolve) => setTimeout(resolve, 1000 * 10));
 	}
-	if (!await client.indices.exists({ index })) {
+	if (!(await client.indices.exists({ index }))) {
 		await client.indices.delete({ index });
 		putMediaMapping(index);
 	}
-	if (!await client.indices.exists({ index: 'files' })) {
-		console.log("Creating files index")
+	if (!(await client.indices.exists({ index: 'files' }))) {
+		console.log('Creating files index');
 		await client.indices.create({ index: 'files' });
 		putFileMapping('files');
 	}
@@ -58,38 +58,30 @@ const resetIndex = async () => {
 };
 
 const putMediaMapping = async (i: string) => {
-
 	const schema = {
-		banner: { type: 'text' },
-		businessEmail: { type: 'text' },
-		capsuleImage: { type: 'text' },
-		contentRating: { type: 'keyword' },
 		datastoreId: { type: 'keyword' },
-		description: { type: 'text' },
-		creator: { type: 'keyword' },
-		discord: { type: 'keyword' },
-		executables: { type: 'text' },
-		facebook: { type: 'keyword' },
-		icon: { type: 'text' },
-		instagram: { type: 'keyword' },
 		isPublic: { type: 'boolean' },
+		mediaType: { type: 'text' },
+		contentRating: { type: 'object' },
+		descriptions: { type: 'object' },
+		credits: { type: 'object' },
+		childProducts: { type: 'text' },
+		executables: { type: 'object' },
 		lastUpdated: { type: 'long' },
 		lastUpdatedContent: { type: 'long' },
-		longDescription: { type: 'text' },
+		nostrEventId: { type: 'text' },
 		password: { type: 'text' },
-		paymentAddress: { type: 'keyword' },
-		productId: { type: 'keyword' },
-		publisher: { type: 'keyword' },
-		publisherDid: { type: 'keyword' },
-		screenshots: { type: 'keyword' },
-		status: { type: 'text' },
-		supportEmail: { type: 'text' },
-		tags: { type: 'text' },
-		title: { type: 'text' },
-		torrents: { type: 'text' },
-		trailer: { type: 'text' },
-		twitter: { type: 'keyword' },
-		website: { type: 'keyword' },
+		images: { type: 'object' },
+		videos: { type: 'object' },
+		donationAddress: { type: 'text' },
+		parentProductId: { type: 'text' },
+		productId: { type: 'text' },
+		publisherDid: { type: 'text' },
+		releaseStatus: { type: 'text' },
+		supportContact: { type: 'text' },
+		tags: { type: 'object' },
+		titles: { type: 'object' },
+		torrents: { type: 'object' },
 		version: { type: 'text' },
 	};
 	console.log('Creating index...');
@@ -97,7 +89,6 @@ const putMediaMapping = async (i: string) => {
 };
 
 const putFileMapping = async (i: string) => {
-
 	const schema = {
 		hash: { type: 'text' },
 		files: { type: 'binary' },

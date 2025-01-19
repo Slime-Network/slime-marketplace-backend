@@ -1,5 +1,5 @@
 # Use Node v8.9.0 LTS
-FROM node:18.13.0
+FROM node:20.12.1
 
 # Setup app working directory
 WORKDIR /usr/src/app

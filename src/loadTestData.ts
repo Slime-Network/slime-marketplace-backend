@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { resetIndex, client } from './app/data/connection';
-import { Media } from 'gosti-shared/types/gosti/Media';
+import { Media } from 'slime-shared/types/slime/Media';
 
 const readAndInsertMedias = async () => {
 	try {
@@ -36,7 +36,7 @@ const insertMediaData = async (media: Media) => {
 		id: media.productId,
 		document: media,
 	});
-	console.log(`Indexed Media - ${media.title} By ${media.publisher}`);
+	console.log(`Indexed Media - ${media.titles[0].title}`);
 };
 
 readAndInsertMedias();

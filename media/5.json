@@ -1,31 +1,140 @@
 {
-	"productId": "730a3902-b4f2-4d79-9aea-b686e3024eee",
-	"datastoreId": "56785679",
-	"title": "Indie Pogo",
-	"publisher": "Lowe Bros. Studios LLC",
-	"creator": "Lowe Bros. Studios LLC",
-	"shortDescription": "A platform brawler game for 2-4 players",
-	"description": "Indie Pogo is a platform brawler game for 2-4 players about bouncing, ricocheting, and pogoing your friends into oblivion! Gather your friends for 2-4 player local romps, or climb the online ladder in the bounciest of battles. Prepare yourself for a rompin' stompin' jumpin' good time!",
-	"longDescription": "\nAbout This Game\n---------------\n\nIndie Pogo is a unique, retro-inspired fighting crossover game! Join up with friends in 4-player local multiplayer mayhem. Or log-in online for battles with foes from around the globe. \n\nYou've seen some fantastic indie cameos in the past, but none can compare to the collaboration of 50+ studios, spread across 15 countries worldwide that Indie Pogo will provide! Prepare yourself to enter new worlds, bash your enemies, and jump with joy!",
-	"website": "https://indiepogo.com/",
-	"twitter": "@lowebros",
-	"discord": "https://discord.gg/tsp22Hd",
-	"instagram": "@lowebros",
-	"publisherDid": "did:chia:16ydm8lppl2k7ewdj6j4063frmzk55sehy97pm92etatpmhnzl7lslxvzg8",
-	"contentRating": "E",
-	"capsuleImage": "https://cdn.akamai.steamstatic.com/steam/apps/818210/capsule_616x353.jpg?t=1612691243",
-	"icon": "https://i.imgur.com/Z8UT1Lx.png",
-	"tags": "indie, action, fighting, pixel graphics, 2d, multiplayer, platformer, singleplayer, crowdfunded, great soundtrack, 2D fighter, local multiplayer",
-	"trailer": "ZLIfREs8qzg",
-	"trailerSource": "youtube",
-	"status": "Complete",
-	"version": "1.0",
-	"screenshots": "https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_afd1f5c8a6808630d34001669a5bed12447f8054.1920x1080.jpg?t=1612691243, https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_0cec3adeee49d3f5553763949d2e1c2aac98e331.1920x1080.jpg?t=1612691243, https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_c38d157e9e525fb43574823f78706d04254bfad4.1920x1080.jpg?t=1612691243",
-	"paymentAddress": "xch1w89m85c6kr7w4jtff5r53lfardjcawsnrdnxh5ke9aeqnaeddphqjez9jh",
-	"password": "password123",
+	"mediaType": "game",
 	"isPublic": true,
-	"supportEmail": "hello@example.com",
-	"businessEmail": "hello@example.com",
-	"lastUpdated": 12348,
-	"lastUpdatedContent": 12348
+	"datastoreId": "56785678",
+	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5",
+	"contentRating": {
+		"type": "ESRB",
+		"rating": "T",
+		"link": ""
+	},
+	"descriptions": [
+		{
+			"type": "short",
+			"description": "A platform brawler game for 2-4 players",
+			"markdown": false,
+			"language": "English"
+		},
+		{
+			"type": "medium",
+			"description": "Indie Pogo is a platform brawler game for 2-4 players about bouncing, ricocheting, and pogoing your friends into oblivion! Gather your friends for 2-4 player local romps, or climb the online ladder in the bounciest of battles. Prepare yourself for a rompin' stompin' jumpin' good time!",
+			"markdown": false,
+			"language": "English"
+		},
+		{
+			"type": "long",
+			"description": "Indie Pogo is a unique, retro-inspired fighting crossover game! Join up with friends in 4-player local multiplayer mayhem. Or log-in online for battles with foes from around the globe. \n\nYou've seen some fantastic indie cameos in the past, but none can compare to the collaboration of 50+ studios, spread across 15 countries worldwide that Indie Pogo will provide! Prepare yourself to enter new worlds, bash your enemies, and jump with joy!",
+			"markdown": true,
+			"language": "English"
+		}
+	],
+	"credits": [
+		{
+			"role": "publisher",
+			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
+		},
+		{
+			"role": "artist",
+			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
+		}
+	],
+	"executables": [
+		{
+			"platform": "windows",
+			"command": "IndiePogo.exe"
+		},
+		{
+			"platform": "mac",
+			"command": "IndiePogo.app"
+		},
+		{
+			"platform": "linux",
+			"command": "IndiePogo"
+		}
+	],
+	"images": [
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/capsule_616x353.jpg?t=1612691243",
+			"type": "capsule",
+			"source": "img",
+			"alt": "Indie Pogo",
+			"language": "English"
+		},
+		{
+			"url": "https://i.imgur.com/Z8UT1Lx.png",
+			"type": "icon",
+			"source": "img",
+			"alt": "Indie Pogo",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_afd1f5c8a6808630d34001669a5bed12447f8054.1920x1080.jpg?t=1612691243",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Indie Pogo",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_0cec3adeee49d3f5553763949d2e1c2aac98e331.1920x1080.jpg?t=1612691243",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Indie Pogo",
+			"language": "English"
+		},
+		{
+			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_c38d157e9e525fb43574823f78706d04254bfad4.1920x1080.jpg?t=1612691243",
+			"type": "screenshot",
+			"source": "img",
+			"alt": "Indie Pogo",
+			"language": "English"
+		}
+	],
+	"videos": [
+		{
+			"type": "trailer",
+			"url": "https://www.youtube.com/watch?v=ZLIfREs8qzg",
+			"source": "youtube",
+			"alt": "Indie Pogo",
+			"language": "English"
+		}
+	],
+	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
+	"parentProductId": "",
+	"productId": "730a3902-b4f2-4d79-9aea-b686e3024eee",
+	"publisherDid": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
+	"releaseStatus": "Available",
+	"supportContact": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
+	"tags": [
+		{
+			"tag": "platformer",
+			"weight": "10",
+			"type": "genre"
+		},
+		{
+			"tag": "singleplayer",
+			"weight": "10",
+			"type": "feature"
+		}
+	],
+	"titles": [
+		{
+			"title": "Indie Pogo",
+			"language": "English"
+		}
+	],
+	"torrents": [
+		{
+			"platform": "windows",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		},
+		{
+			"platform": "mac",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		},
+		{
+			"platform": "linux",
+			"torrent": "magnet:?xt=urn:btih:4a6"
+		}
+	],
+	"version": "1.1"
 }
