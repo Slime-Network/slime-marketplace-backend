@@ -11,7 +11,6 @@ const readAndInsertMedias = async () => {
 		console.log(`Found ${files.length} Files`);
 
 		for (const file of files) {
-			console.log(`Reading File - ${file}`);
 			const filePath = path.join('./media', file);
 			const media = parseMediaFile(filePath);
 			await insertMediaData(media);

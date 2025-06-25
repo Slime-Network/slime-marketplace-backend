@@ -1,31 +1,42 @@
 {
-	"mediaType": "game",
+	"mediaType": "Game",
 	"isPublic": true,
 	"datastoreId": "56785678",
 	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1",
-	"contentRating": {
-		"type": "ESRB",
-		"rating": "T",
-		"link": ""
-	},
+	"contentRatings": [
+		{
+			"type": "ESRB",
+			"rating": "T",
+			"link": ""
+		}
+	],
 	"descriptions": [
 		{
-			"type": "short",
+			"type": "Short",
 			"description": "A brutal exploration and survival game.",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
-			"type": "medium",
+			"type": "Medium",
 			"description": "A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by viking culture. Battle, build, and conquer your way to a saga worthy of Odin’s patronage!",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
-			"type": "long",
+			"type": "Long",
 			"description": "About This Game\n---------------\n\n**Valheim** is a brutal exploration and survival game for 1-10 players set in a procedurally-generated world inspired by Norse mythology. Craft powerful weapons, construct longhouses, and slay mighty foes to prove yourself to Odin!  \n  \n![](https://cdn.cloudflare.steamstatic.com/steam/apps/892970/extras/VALHEIM_EXPLORE.gif?t=1673342039)  \n**EXPLORE THE TENTH WORLD**  \nExplore a world shrouded in mystery. Discover distinct environments with unique enemies to battle, resources to gather and secrets to uncover! Be a viking, sail the open seas in search of lands unknown, and fight bloodthirsty monsters.  \n  \n![](https://cdn.cloudflare.steamstatic.com/steam/apps/892970/extras/VALHEIM_BUILD.gif?t=1673342039)  \n**BUILD MIGHTY HALLS**  \nRaise viking longhouses and build bases that offer reprieve from the dangers ahead. Customise buildings, both inside and out, with a detailed building system. Progress through building tiers to upgrade, expand and defend your base.  \n  \n![](https://cdn.cloudflare.steamstatic.com/steam/apps/892970/extras/VALHEIM_CRAFT_SURVIVE.gif?t=1673342039)  \n**GATHER, CRAFT AND SURVIVE**  \nStruggle to survive as you gather materials and craft weapons, armor, tools, ships, and defenses. Decorate your hearths and sharpen your blades, grow crops and vegetables, prepare food, brew meads and potions, and progress as you defeat more difficult bosses and discover new recipes and blueprints.  \n  \n**KEY FEATURES:**  \n\n*   Massive procedurally-generated world where every biome is immersive and distinct, with unique enemies, resources and crafting recipes to discover.  \n    \n*   Play alone or with up to 10 players on player-hosted dedicated servers and experience unlimited world creation and enemies that scale in difficulty.  \n    \n*   Staminabased combat that rewards preparation and skill. Utilize weapon types with unique attacks, different blocking styles, ranged combat, dodges and parries to fight your enemies.  \n    \n*   Rewarding food system where you cannot starve and are not punished for not eating, instead you gain health, stamina and regeneration buffs depending on what foods you consume.  \n    \n*   Intuitive crafting where recipes are discovered as you explore the world, and pick up new resources and ingredients.  \n    \n*   Flexible building system that takes structural integrity and ventilation into account. Build a small shelter or an entire village, make outposts or claim abandoned buildings as your own. Then customize to your liking.  \n    \n*   Sail boats and ships to reach distant lands and explore the sea that offers riches to claim and monsters to fight.  \n    \n*   Epic boss fights that will test even the best prepared vikings and offer rewards that help you on your journey.  \n      \n    **Community-translated languages:**  \n    In addition to the officially supported languages, Valheim has several community-translated languages. As the name would suggest these are all translated by fans and members of the community, and is an ongoing process. **We can't guarantee the quality nor completeness of any specific translation effort.**\n",
 			"markdown": true,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"credits": [
@@ -38,55 +49,61 @@
 			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
 		}
 	],
-	"executables": [
-		{
-			"platform": "windows",
-			"command": "valheim.exe"
-		},
-		{
-			"platform": "mac",
-			"command": "valheim.app"
-		},
-		{
-			"platform": "linux",
-			"command": "valheim"
-		}
-	],
 	"images": [
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/capsule_616x353.jpg?t=1673342039",
-			"type": "capsule",
+			"type": "Capsule",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Valheim",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://i.imgur.com/Z8UT1Lx.png",
 			"type": "icon",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Valheim",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/ss_a600a7d4ca954543e22f571a9629521a13f82143.600x338.jpg?t=1673342039",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Valheim",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/ss_cd0262c5abf8a90ee5e1059acafc5a92b6be0e73.600x338.jpg?t=1673342039",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Valheim",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/ss_3db385fc1223914dadb199ac8682683a8c59454e.600x338.jpg?t=1673342039",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Valheim",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"videos": [
@@ -94,8 +111,12 @@
 			"type": "trailer",
 			"url": "https://www.youtube.com/watch?v=5mHRJ1KFe20",
 			"source": "youtube",
+			"nsfw": false,
 			"alt": "Valheim",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
@@ -174,22 +195,42 @@
 	"titles": [
 		{
 			"title": "Valhiem",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
-	"torrents": [
+
+	"files": [
 		{
-			"platform": "windows",
+			"executables": [
+				{
+					"platform": "windows",
+					"command": "valheim.exe"
+				}
+			],
+			"torrent": "magnet:?xt=urn:btih:4a6",
+			"password": "password",
+			"version": "2.4"
+		},
+		{
+			"executables": [
+				{
+					"platform": "mac",
+					"command": "valheim.app"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		},
 		{
-			"platform": "mac",
-			"torrent": "magnet:?xt=urn:btih:4a6"
-		},
-		{
-			"platform": "linux",
+			"executables": [
+				{
+					"platform": "linux",
+					"command": "valheim"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		}
-	],
-	"version": "2.4"
+	]
 }

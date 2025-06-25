@@ -1,5 +1,6 @@
 {
-	"mediaType": "game",
+	"mediaType": "Game",
+	"isPublic": true,
 	"datastoreId": "56785679",
 	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa9",
 	"contentRating": {
@@ -12,19 +13,28 @@
 			"type": "short",
 			"description": "",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "medium",
 			"description": "Named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "long",
 			"description": "Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, _Outer Wilds_ is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.  \n  \n**Welcome to the Space Program!**  \nYou're the newest recruit of Outer Wilds Ventures, a fledgling space program searching for answers in a strange, constantly evolving solar system.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/753640/extras/OW1.png?t=1660850445)  \n  \n**Mysteries of the Solar System...**  \nWhat lurks in the heart of the ominous Dark Bramble? Who built the alien ruins on the Moon? Can the endless time loop be stopped? Answers await you in the most dangerous reaches of space.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/753640/extras/OW2.png?t=1660850445)  \n  \n**A World That Changes Over Time**  \nThe planets of _Outer Wilds_ are packed with hidden locations that change with the passage of time. Visit an underground city before it's swallowed by sand, or explore the surface of a planet as it crumbles beneath your feet. Every secret is guarded by hazardous environments and natural catastrophes.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/753640/extras/OW4.png?t=1660850445)  \n  \n**Grab Your Intergalactic Hiking Gear!**  \nStrap on your hiking boots, check your oxygen levels, and get ready to venture into space. Use a variety of unique gadgets to probe your surroundings, track down mysterious signals, decipher ancient alien writing, and roast the perfect marshmallow.  \n  \n![](https://cdn.akamai.steamstatic.com/steam/apps/753640/extras/OW3.png?t=1660850445)",
 			"markdown": true,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"credits": [
@@ -37,55 +47,61 @@
 			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
 		}
 	],
-	"executables": [
-		{
-			"platform": "windows",
-			"command": "OuterWilds.exe"
-		},
-		{
-			"platform": "mac",
-			"command": "OuterWilds.app"
-		},
-		{
-			"platform": "linux",
-			"command": "OuterWilds"
-		}
-	],
 	"images": [
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/753640/capsule_616x353.jpg?t=1660850445",
 			"type": "capsule",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Outer Wilds",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://i.imgur.com/Z8UT1Lx.png",
 			"type": "icon",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Outer Wilds",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/753640/ss_ec95a283483f0438be40d033f08b9d956e748d54.1920x1080.jpg?t=1660850445",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Outer Wilds",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/753640/ss_09f0fa8d9b8d7da1408cf4e03303d896cbd9be18.1920x1080.jpg?t=1660850445",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Outer Wilds",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/753640/ss_c624a6b8edca0d451605592edd927dbcc14917a8.1920x1080.jpg?t=1660850445",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Outer Wilds",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"videos": [
@@ -93,13 +109,17 @@
 			"type": "trailer",
 			"url": "https://www.youtube.com/watch?v=x_VkqvdGvcc",
 			"source": "youtube",
+			"nsfw": false,
 			"alt": "Outer Wilds",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
 	"parentProductId": "",
-	"productId": "927B6E97-51AF-6824-A7B9-8D855281D990",
+	"productId": "927B6E97-51AF-6824-A7B9-878552813330",
 	"publisherDid": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
 	"releaseStatus": "Available",
 	"supportContact": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
@@ -118,22 +138,41 @@
 	"titles": [
 		{
 			"title": "Outer Wilds",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
-	"torrents": [
+	"files": [
 		{
-			"platform": "windows",
+			"executables": [
+				{
+					"platform": "windows",
+					"command": "OuterWilds.exe"
+				}
+			],
+			"torrent": "magnet:?xt=urn:btih:4a6",
+			"password": "password",
+			"version": "2.4"
+		},
+		{
+			"executables": [
+				{
+					"platform": "mac",
+					"command": "OuterWilds.app"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		},
 		{
-			"platform": "mac",
-			"torrent": "magnet:?xt=urn:btih:4a6"
-		},
-		{
-			"platform": "linux",
+			"executables": [
+				{
+					"platform": "linux",
+					"command": "OuterWilds"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		}
-	],
-	"version": "1.2"
+	]
 }

@@ -8,6 +8,9 @@ import { listingsRouter } from './data/listings.controller';
 import { filesRouter } from './data/files.controller';
 import path from 'path';
 import koaBody from 'koa-body';
+import { ordersRouter } from './data/orders.controller';
+import { productsRouter } from './data/products.controller';
+import { peopleRouter } from './data/people.controller';
 
 const app = new Koa();
 const port = process.env.PORT || 5233;
@@ -54,7 +57,14 @@ app
 	.use(listingsRouter.allowedMethods())
 	.use(filesRouter.routes())
 	.use(filesRouter.allowedMethods())
+	.use(ordersRouter.routes())
+	.use(ordersRouter.allowedMethods())
+	.use(productsRouter.routes())
+	.use(productsRouter.allowedMethods())
+	.use(peopleRouter.routes())
+	.use(peopleRouter.allowedMethods())
 	.use(mount('/public', serve('public')))
+	.use(mount('/apps', serve('apps')))
 	.listen(port, (): void => {
 		console.log(`App Listening on Port ${port}`);
 		console.log(`Path: ${path.join(__dirname, '../../public')}`);

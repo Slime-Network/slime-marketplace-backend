@@ -1,5 +1,5 @@
 {
-	"mediaType": "game",
+	"mediaType": "Game",
 	"isPublic": true,
 	"datastoreId": "56785679",
 	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2",
@@ -13,19 +13,28 @@
 			"type": "short",
 			"description": "Dig, fight, explore, build!",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "medium",
 			"description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "long",
 			"description": "About This Game\n---------------\n\nDig, Fight, Explore, Build: The very world is at your fingertips as you fight for survival, fortune, and glory. Will you delve deep into cavernous expanses in search of treasure and raw materials with which to craft ever-evolving gear, machinery, and aesthetics? Perhaps you will choose instead to seek out ever-greater foes to test your mettle in combat? Maybe you will decide to construct your own city to house the host of mysterious allies you may encounter along your travels?  \n  \nIn the World of Terraria, the choice is yours!  \n  \nBlending elements of classic action games with the freedom of sandbox-style creativity, Terraria is a unique gaming experience where both the journey and the destination are completely in the players control. The Terraria adventure is truly as unique as the players themselves!  \n  \nAre you up for the monumental task of exploring, creating, and defending a world of your own?  \n  \n**Key features:**  \n\n*   Sandbox Play  \n\n*   Randomly generated worlds  \n*   Free Content Updates",
 			"markdown": true,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"credits": [
@@ -38,55 +47,61 @@
 			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
 		}
 	],
-	"executables": [
-		{
-			"platform": "windows",
-			"command": "Terraria.exe"
-		},
-		{
-			"platform": "mac",
-			"command": "Terraria.app"
-		},
-		{
-			"platform": "linux",
-			"command": "Terraria"
-		}
-	],
 	"images": [
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/capsule_616x353.jpg?t=1666290860",
 			"type": "capsule",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Terraria",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://i.imgur.com/Z8UT1Lx.png",
 			"type": "icon",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Terraria",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/ss_9edd98caaf9357c2f40758f354475a56e356e8b0.1920x1080.jpg?t=1666290860",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Terraria",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/ss_75ea9a7e39eb34b40efa1e6dfd2536098dc4734b.1920x1080.jpg?t=1666290860",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Terraria",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/ss_782374517c1792debd74d24856203b876eba3a5d.1920x1080.jpg?t=1666290860",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Terraria",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"videos": [
@@ -94,13 +109,17 @@
 			"type": "trailer",
 			"url": "https://www.youtube.com/watch?v=6nUvWkD8rAE",
 			"source": "youtube",
+			"nsfw": false,
 			"alt": "Terraria",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
 	"parentProductId": "",
-	"productId": "927B6E97-51AF-6824-A7B9-8D855281D990",
+	"productId": "111B6E97-51AF-6824-A7B9-8D855281D990",
 	"publisherDid": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
 	"releaseStatus": "Available",
 	"supportContact": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
@@ -134,22 +153,41 @@
 	"titles": [
 		{
 			"title": "Terraria",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
-	"torrents": [
+	"files": [
 		{
-			"platform": "windows",
+			"executables": [
+				{
+					"platform": "windows",
+					"command": "Terraria.exe"
+				}
+			],
+			"torrent": "magnet:?xt=urn:btih:4a6",
+			"password": "password",
+			"version": "2.4"
+		},
+		{
+			"executables": [
+				{
+					"platform": "mac",
+					"command": "Terraria.app"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		},
 		{
-			"platform": "mac",
-			"torrent": "magnet:?xt=urn:btih:4a6"
-		},
-		{
-			"platform": "linux",
+			"executables": [
+				{
+					"platform": "linux",
+					"command": "Terraria"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		}
-	],
-	"version": "3.2"
+	]
 }

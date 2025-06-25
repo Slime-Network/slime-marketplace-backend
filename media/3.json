@@ -1,5 +1,5 @@
 {
-	"mediaType": "game",
+	"mediaType": "Game",
 	"isPublic": true,
 	"datastoreId": "56785679",
 	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3",
@@ -13,19 +13,28 @@
 			"type": "short",
 			"description": "A stray cat must escape a long-forgotten city",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "medium",
 			"description": "Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "long",
 			"description": "Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten city.\nStray is a third-person cat adventure game set amidst the detailed, neon-lit alleys of a decaying cybercity and the murky environments of its seedy underbelly. Roam surroundings high and low, defend against unforeseen threats and solve the mysteries of this unwelcoming place inhabited by curious droids and dangerous creatures.\nSee the world through the eyes of a cat and interact with the environment in playful ways. Be stealthy, nimble, silly, and sometimes as annoying as possible with the strange inhabitants of this mysterious world.\nAlong the way, the cat befriends a small flying drone, known only as B-12. With the help of this newfound companion, the duo must find a way out.\nStray is developed by BlueTwelve Studio, a small team from the south of France mostly made up of cats and a handful of humans.",
 			"markdown": true,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"credits": [
@@ -38,55 +47,61 @@
 			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
 		}
 	],
-	"executables": [
-		{
-			"platform": "windows",
-			"command": "Stray.exe"
-		},
-		{
-			"platform": "mac",
-			"command": "Stray.app"
-		},
-		{
-			"platform": "linux",
-			"command": "Stray"
-		}
-	],
 	"images": [
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/capsule_616x353.jpg?t=1670349423",
 			"type": "capsule",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Stray",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://i.imgur.com/Z8UT1Lx.png",
 			"type": "icon",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Stray",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/ss_88e209a90c2039fa76bca6fa08c641365be38d50.1920x1080.jpg?t=1670349423",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Stray",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/ss_e8f0cbd5efdba352e89c4cfcee3fe991a1e1be8a.1920x1080.jpg?t=1670349423",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Stray",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/ss_88e209a90c2039fa76bca6fa08c641365be38d50.1920x1080.jpg?t=1670349423",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Stray",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"videos": [
@@ -94,13 +109,17 @@
 			"type": "trailer",
 			"url": "https://www.youtube.com/watch?v=4uP2MyUL49s",
 			"source": "youtube",
+			"nsfw": false,
 			"alt": "Stray",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
 	"parentProductId": "",
-	"productId": "927B6E97-51AF-6824-A7B9-8D855281D990",
+	"productId": "927B6E97-51AF-6824-A7B9-8D8552816660",
 	"publisherDid": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
 	"releaseStatus": "Available",
 	"supportContact": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
@@ -119,22 +138,41 @@
 	"titles": [
 		{
 			"title": "Stray",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
-	"torrents": [
+	"files": [
 		{
-			"platform": "windows",
+			"executables": [
+				{
+					"platform": "windows",
+					"command": "Stray.exe"
+				}
+			],
+			"torrent": "magnet:?xt=urn:btih:4a6",
+			"password": "password",
+			"version": "2.4"
+		},
+		{
+			"executables": [
+				{
+					"platform": "mac",
+					"command": "Stray.app"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		},
 		{
-			"platform": "mac",
-			"torrent": "magnet:?xt=urn:btih:4a6"
-		},
-		{
-			"platform": "linux",
+			"executables": [
+				{
+					"platform": "linux",
+					"command": "Stray"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		}
-	],
-	"version": "1.5"
+	]
 }

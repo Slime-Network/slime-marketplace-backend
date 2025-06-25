@@ -21,7 +21,6 @@ const listingsRouter: Router = new Router(routerOpts);
 
 listingsRouter.get('/search', async (ctx: Koa.Context) => {
 	const searchParams = ctx.request.query as unknown as SearchRequest;
-	console.log('Search params: ', searchParams);
 	ctx.body = await queryTerm(searchParams);
 });
 
@@ -124,7 +123,7 @@ const queryTerm = (params: SearchRequest) => {
 		case SortOptions.NameAsc:
 			sort = [
 				{
-					'title.keyword': {
+					'titles[0].title': {
 						order: 'asc',
 					},
 				},
@@ -133,7 +132,7 @@ const queryTerm = (params: SearchRequest) => {
 		case SortOptions.NameDesc:
 			sort = [
 				{
-					'title.keyword': {
+					'titles[0].title': {
 						order: 'desc',
 					},
 				},
@@ -142,25 +141,23 @@ const queryTerm = (params: SearchRequest) => {
 	}
 
 	var query: QueryDslQueryContainer = {
-		bool: {
-			must: [
-				{
-					match: {
-						title: {
-							query: params.titleTerm,
-							operator: 'and',
-							fuzziness: 'auto',
+		nested: {
+			path: 'titles',
+			query: {
+				bool: {
+					must: [
+						{
+							match: {
+								'titles.title': {
+									query: params.titleTerm,
+									operator: 'and',
+									fuzziness: 'auto',
+								},
+							},
 						},
-					},
+					],
 				},
-				{
-					match: {
-						isPublic: {
-							query: true,
-						},
-					},
-				},
-			],
+			},
 		},
 	};
 
@@ -180,15 +177,18 @@ const queryTerm = (params: SearchRequest) => {
 		};
 	}
 
-	return client.search({
+	const result = client.search({
 		from: params.offset,
 		index: index,
 		_source: {
-			excludes: ['*.password', '*.torrents', '*.executables'],
+			excludes: ['*.files.password', '*.files.torrent'],
 		},
 		query: query,
-		highlight: { fields: { title: {} } },
+		highlight: { fields: { titles: {} } },
+		size: params.size,
 	});
+	console.log('query Result', query, result);
+	return result;
 };
 const getInstallData = (params: any) => {
 	// need to make this permissioned
@@ -215,7 +215,7 @@ const getInstallData = (params: any) => {
 				],
 			},
 		},
-		highlight: { fields: { title: {} } },
+		highlight: { fields: { titles: {} } },
 	});
 };
 

@@ -1,5 +1,5 @@
 {
-	"mediaType": "game",
+	"mediaType": "Game",
 	"isPublic": true,
 	"datastoreId": "56785678",
 	"nostrEventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5",
@@ -13,19 +13,28 @@
 			"type": "short",
 			"description": "A platform brawler game for 2-4 players",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "medium",
 			"description": "Indie Pogo is a platform brawler game for 2-4 players about bouncing, ricocheting, and pogoing your friends into oblivion! Gather your friends for 2-4 player local romps, or climb the online ladder in the bounciest of battles. Prepare yourself for a rompin' stompin' jumpin' good time!",
 			"markdown": false,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"type": "long",
 			"description": "Indie Pogo is a unique, retro-inspired fighting crossover game! Join up with friends in 4-player local multiplayer mayhem. Or log-in online for battles with foes from around the globe. \n\nYou've seen some fantastic indie cameos in the past, but none can compare to the collaboration of 50+ studios, spread across 15 countries worldwide that Indie Pogo will provide! Prepare yourself to enter new worlds, bash your enemies, and jump with joy!",
 			"markdown": true,
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"credits": [
@@ -38,55 +47,61 @@
 			"did": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2"
 		}
 	],
-	"executables": [
-		{
-			"platform": "windows",
-			"command": "IndiePogo.exe"
-		},
-		{
-			"platform": "mac",
-			"command": "IndiePogo.app"
-		},
-		{
-			"platform": "linux",
-			"command": "IndiePogo"
-		}
-	],
 	"images": [
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/capsule_616x353.jpg?t=1612691243",
 			"type": "capsule",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Indie Pogo",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://i.imgur.com/Z8UT1Lx.png",
 			"type": "icon",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Indie Pogo",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_afd1f5c8a6808630d34001669a5bed12447f8054.1920x1080.jpg?t=1612691243",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Indie Pogo",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_0cec3adeee49d3f5553763949d2e1c2aac98e331.1920x1080.jpg?t=1612691243",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Indie Pogo",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		},
 		{
 			"url": "https://cdn.akamai.steamstatic.com/steam/apps/818210/ss_c38d157e9e525fb43574823f78706d04254bfad4.1920x1080.jpg?t=1612691243",
 			"type": "screenshot",
 			"source": "img",
+			"nsfw": false,
 			"alt": "Indie Pogo",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"videos": [
@@ -94,13 +109,17 @@
 			"type": "trailer",
 			"url": "https://www.youtube.com/watch?v=ZLIfREs8qzg",
 			"source": "youtube",
+			"nsfw": false,
 			"alt": "Indie Pogo",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
 	"donationAddress": "txch19vzq2t4frk5hemzr2sskzgcl8pypwaz0fc4alx8ax3gx5vc3mzxq7k4qeh",
 	"parentProductId": "",
-	"productId": "730a3902-b4f2-4d79-9aea-b686e3024eee",
+	"productId": "730a3302-b4f2-4d79-9aea-b686e3024eee",
 	"publisherDid": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
 	"releaseStatus": "Available",
 	"supportContact": "did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2",
@@ -119,22 +138,41 @@
 	"titles": [
 		{
 			"title": "Indie Pogo",
-			"language": "English"
+			"language": {
+				"english": "English",
+				"locale": "English"
+			}
 		}
 	],
-	"torrents": [
+	"files": [
 		{
-			"platform": "windows",
+			"executables": [
+				{
+					"platform": "windows",
+					"command": "IndiePogo.exe"
+				}
+			],
+			"torrent": "magnet:?xt=urn:btih:4a6",
+			"password": "password",
+			"version": "2.4"
+		},
+		{
+			"executables": [
+				{
+					"platform": "mac",
+					"command": "IndiePogo.app"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		},
 		{
-			"platform": "mac",
-			"torrent": "magnet:?xt=urn:btih:4a6"
-		},
-		{
-			"platform": "linux",
+			"executables": [
+				{
+					"platform": "linux",
+					"command": "IndiePogo"
+				}
+			],
 			"torrent": "magnet:?xt=urn:btih:4a6"
 		}
-	],
-	"version": "1.1"
+	]
 }
